@@ -14,6 +14,10 @@
 		BEE3E6362B1F99E600873BE1 /* _3HourSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3E6352B1F99E600873BE1 /* _3HourSchedulerTests.swift */; };
 		BEE3E6402B1F99E600873BE1 /* _3HourSchedulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3E63F2B1F99E600873BE1 /* _3HourSchedulerUITests.swift */; };
 		BEE3E6422B1F99E600873BE1 /* _3HourSchedulerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3E6412B1F99E600873BE1 /* _3HourSchedulerUITestsLaunchTests.swift */; };
+		BEE3E64F2B1F9A9D00873BE1 /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3E64E2B1F9A9D00873BE1 /* Days.swift */; };
+		BEE3E6512B1FA7B200873BE1 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3E6502B1FA7B200873BE1 /* Details.swift */; };
+		BEE3E6552B1FB57900873BE1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3E6542B1FB57900873BE1 /* Settings.swift */; };
+		BEE3E6572B1FBD4500873BE1 /* Weeks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3E6562B1FBD4500873BE1 /* Weeks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		BEE3E63B2B1F99E600873BE1 /* 23HourSchedulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 23HourSchedulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE3E63F2B1F99E600873BE1 /* _3HourSchedulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _3HourSchedulerUITests.swift; sourceTree = "<group>"; };
 		BEE3E6412B1F99E600873BE1 /* _3HourSchedulerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _3HourSchedulerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BEE3E64E2B1F9A9D00873BE1 /* Days.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
+		BEE3E6502B1FA7B200873BE1 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
+		BEE3E6542B1FB57900873BE1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		BEE3E6562B1FBD4500873BE1 /* Weeks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weeks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 				BEE3E6272B1F99E600873BE1 /* Assets.xcassets */,
 				BEE3E62C2B1F99E600873BE1 /* _3HourScheduler.entitlements */,
 				BEE3E6292B1F99E600873BE1 /* Preview Content */,
+				BEE3E64E2B1F9A9D00873BE1 /* Days.swift */,
+				BEE3E6502B1FA7B200873BE1 /* Details.swift */,
+				BEE3E6542B1FB57900873BE1 /* Settings.swift */,
+				BEE3E6562B1FBD4500873BE1 /* Weeks.swift */,
 			);
 			path = 23HourScheduler;
 			sourceTree = "<group>";
@@ -260,7 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEE3E6262B1F99E500873BE1 /* ContentView.swift in Sources */,
+				BEE3E64F2B1F9A9D00873BE1 /* Days.swift in Sources */,
+				BEE3E6512B1FA7B200873BE1 /* Details.swift in Sources */,
+				BEE3E6572B1FBD4500873BE1 /* Weeks.swift in Sources */,
 				BEE3E6242B1F99E500873BE1 /* _3HourSchedulerApp.swift in Sources */,
+				BEE3E6552B1FB57900873BE1 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +441,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"23HourScheduler/Preview Content\"";
+				DEVELOPMENT_TEAM = SYDJ8K65W7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -435,6 +452,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.-3HourScheduler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -450,6 +468,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"23HourScheduler/Preview Content\"";
+				DEVELOPMENT_TEAM = SYDJ8K65W7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -460,6 +479,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.-3HourScheduler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};

@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct _3HourSchedulerApp: App {
+    @Environment(\.openWindow) var openWindow
     var body: some Scene {
         WindowGroup {
             ContentView()
