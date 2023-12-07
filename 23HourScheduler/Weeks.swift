@@ -26,6 +26,11 @@ struct Weeks: View {
     }
     
     func nextWeek() -> Void {
+        for day in days {
+            for i in (defaults.integer(forKey: "StartTime")..<defaults.integer(forKey: "EndTime")) {
+                defaults.set("", forKey: "\(day), \(i), data")
+            }
+        }
         defaults.set(defaults.integer(forKey: "weekNum")+1, forKey: "weekNum")
         reloadd.rel()
     }
