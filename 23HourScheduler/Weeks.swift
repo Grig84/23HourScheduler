@@ -7,16 +7,30 @@
 
 import SwiftUI
 
+class reloader: ObservableObject {
+    @Published var count: Int = 0
+    
+    func rel() {
+        count+=1
+    }
+}
+
 struct Weeks: View {
+    @ObservedObject var reloadd = reloader()
     let defaults = UserDefaults.standard
     @State var reloads: Int
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     
     func reload() -> Void {
         reloads += 1
     }
     
+    func nextWeek() -> Void {
+        defaults.set(defaults.integer(forKey: "weekNum")+1, forKey: "weekNum")
+        reloadd.rel()
+    }
+    
     var body: some View {
-        let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
         NavigationStack {
             ScrollView {
                 VStack {
@@ -25,13 +39,29 @@ struct Weeks: View {
                             Days(weeks: self, day: day, startHour: defaults.integer(forKey: "StartTime"), endHour: defaults.integer(forKey: "EndTime"))
                         }
                     }
-                    NavigationLink {
-                        Settings(weeks: self)
-                    } label: {
-                        Text("Settings")
-                            .font(.title)
-                            .foregroundStyle(.black)
+                    HStack {
+                        NavigationLink {
+                            Settings(weeks: self)
+                        } label: {
+                            Text("Settings")
+                                .font(.title)
+                                .foregroundStyle(.black)
+                        }
+                        
+                        .padding()
+                        .padding()
+                        .padding()
+                        .padding()
+                        
+                        Button {
+                            nextWeek()
+                        } label: {
+                            Text("Next Week")
+                                .font(.title)
+                                .foregroundStyle(.black)
+                        }
                     }
+                    
                     .padding()
                 }
             }

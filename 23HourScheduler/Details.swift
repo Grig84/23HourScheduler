@@ -14,10 +14,9 @@ struct Details: View {
     let defaults = UserDefaults.standard
     @State private var val = ""
     
-    func Next() -> some View {
+    func Next() -> Void {
         defaults.set(val, forKey: "\(day), \(hour), data")
-        dday.reload()
-        return dday.weeks
+        dday.weeks.reloadd.rel()
     }
     var body: some View {
         VStack {
@@ -37,7 +36,7 @@ struct Details: View {
             TextField("What Do You Want To Do?", text: $val)
                 .textFieldStyle(.roundedBorder)
             .padding()
-            NavigationLink {
+            Button {
                 Next()
             } label: {
                 Text("Save")
@@ -50,5 +49,5 @@ struct Details: View {
 }
 
 #Preview {
-    Details(dday: Days(weeks: Weeks(reloads: 1), day: "Monday"), day: "Monday", hour: 4)
+    Details(dday: Days(weeks: Weeks(reloads: 1), day: "Monday", startHour: 6, endHour: 8), day: "Monday", hour: 4)
 }

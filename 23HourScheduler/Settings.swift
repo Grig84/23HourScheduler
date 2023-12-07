@@ -13,11 +13,10 @@ struct Settings: View {
     @State private var endTime: Int = 0
     let defaults = UserDefaults.standard
     
-    func Next() -> some View {
+    func Next() -> Void {
         defaults.set(endTime, forKey: "EndTime")
         defaults.set(startTime, forKey: "StartTime")
-        weeks.reload()
-        return Weeks(reloads: 1)
+        weeks.reloadd.rel()
     }
     
     var body: some View {
@@ -32,7 +31,7 @@ struct Settings: View {
             TextField("End Of Day", value: $endTime, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
-            NavigationLink {
+            Button {
                 Next()
             } label: {
                 Text("Save")
